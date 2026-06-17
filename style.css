@@ -82,6 +82,24 @@ img {
     box-shadow: var(--shadow-sm);
 }
 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-gold);
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -145,16 +163,16 @@ img {
    ============================================= */
 @media (max-width: 599px) {
     .nav-links {
-        gap: 12px;
+        gap: 15px;
     }
 
     .nav-links a {
-        font-size: 0.78rem;
+        font-size: 0.9rem;
     }
 
     .logo-img-wrap {
         height: 48px;
-        padding: 4px 10px;
+        padding: 4px 8px;
     }
 
     .logo-img {
@@ -165,6 +183,14 @@ img {
 }
 
 @media (min-width: 900px) {
+    .nav-links {
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 1.0rem;
+    }
+
     .logo-img-wrap {
         height: 58px;
         padding: 6px 14px;
@@ -177,23 +203,9 @@ img {
     }
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-}
 
-.nav-links a {
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-muted);
-}
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--accent-gold);
-}
+
 
 /* =============================================
    HERO
@@ -835,5 +847,47 @@ img {
 @media (min-width: 768px) {
     .fab-call {
         display: none;
+    }
+}
+
+
+/* =============================================
+   MOBILE SLIDABLE / SCROLLABLE NAV
+   ============================================= */
+@media (max-width: 767px) {
+    /* 1. Ensure the navbar doesn't stretch off the screen */
+    .navbar {
+        flex-wrap: nowrap;
+        gap: 15px;
+    }
+
+    /* 2. Make the nav container scrollable */
+    nav {
+        overflow-x: auto;
+        min-width: 0; /* Prevents flexbox from forcing the container to be too wide */
+        
+        /* Hide the scrollbar for a clean, app-like look */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    nav::-webkit-scrollbar {
+        display: none; 
+    }
+
+    /* 3. Force the links to stay in a single line */
+    .nav-links {
+        display: flex;
+        width: max-content; /* Container grows to fit all links */
+        gap: 18px; /* Space between links */
+        padding-right: 20px; /* Gives a little breathing room at the end of the scroll */
+    }
+
+    .nav-links a {
+        white-space: nowrap; /* Prevents text from breaking into two lines */
+        font-size: 0.95rem;
+        font-weight: 600;
+        padding: 5px 0;
     }
 }

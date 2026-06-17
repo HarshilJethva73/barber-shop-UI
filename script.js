@@ -28,6 +28,7 @@
             link.classList.remove('active');
             if (link.getAttribute('href') === '#' + current) {
                 link.classList.add('active');
+                link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
             }
         });
     }
