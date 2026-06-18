@@ -2,7 +2,7 @@
 
 A modern, responsive barbershop website for **Alen Haircut & Grooming** located in Adipur, Gandhidham, Gujarat. Built with **HTML5, CSS3, and JavaScript** with a focus on **SEO optimization** and **mobile-first design**.
 
-**Live Site:** https://barbershop-adipur.netlify.app/
+**Live Site:** https://alen-haircut-adipur.netlify.app/
 
 ---
 
@@ -141,7 +141,7 @@ barber/
 
 The website is hosted on **Netlify** with automatic deployment from GitHub.
 
-**Current URL:** https://barbershop-adipur.netlify.app/
+**Current URL:** https://alen-haircut-adipur.netlify.app/
 
 ### How to Update
 
